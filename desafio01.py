@@ -1,20 +1,19 @@
-hora1=int(input("digite uma das horas"))
-min1=int(input("digite uma minutagem"))
-hora2=int(input("digite uma das horas"))
-min2=int(input("digite uma minutagem"))
+h01 = int(input("Digite a hora da entrada: "))
+m01 = int(input("Digite o minuto: "))
+h02 = int(input("Digite a hora da entrada: "))
+m02 = int(input("Digite o minuto: "))
 
-somaH=hora1+hora2
-somaM=min1+min2
+somah = h01 + h02
+somam = m01 + m02
 
+if somam >= 60:
+    somah += 1
+    somam -= 60
+if somah >= 12:
+    somah -= 12
+if somah >= 24:
+    somah -= 24
+if somah > 12:
+    somah -= 12
 
-
-
-
-if somaM>=60:
-    minuto=somaM-60
-if somaH>=12:
-    hora=somaH-60
-
-
-
-print(f"{hora+1}:{minuto}")
+print(f"{somah:02d}:{somam:02d}h")
